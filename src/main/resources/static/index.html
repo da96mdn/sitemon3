@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AQ Site Monitoring</title>
+  <meta name="description" content="Source code generated using layoutit.com">
+  <meta name="author" content="LayoutIt!">
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body class="" style="	background-image: linear-gradient(to bottom, rgba(0,0,200,0.1), rgba(0,0,200,0.4));	background-position: top left;	background-size: 100%;	background-repeat: repeat;">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="page-header">
+          <h1> AQ Site Monitoring <small>- v1.0.20</small></h1>
+        </div>
+        <p> Övervakningsapplikation som används för att kontrollera status för olika webbplatser.&nbsp;<br><span>Skriv först in antalet webbplatser som ska övervakas och klicka sedan&nbsp;</span><span>på uppdatera.&nbsp;</span><br><span>Ändra URL-adresserna och övriga uppgifter för&nbsp;</span><span>webbplatserna och klicka&nbsp;</span><span>på spara.</span></p>
+        <div class="row">
+          <div class="col-md-12">
+            <h5 class="">&nbsp;</h5>
+          </div>
+        </div>
+        <div>
+        </div>
+        <div class="row">
+          <div class="col-md-2" style="	box-shadow: 0px 0px 4px  black;">
+            <form role="form" action="postNrOfSites" method="POST">
+              <div class="form-group">
+                <label for="inputNrOfWebSites">Antal Webbplatser</label>
+                <input type="number" class="form-control" id="inputNrOfWebSites" name="nrOfSites">
+              </div>
+              <button type="submit" class="btn btn-primary float-right"> Uppdatera</button>
+            </form>
+          </div>
+          <div class="col-md-2" style="	box-shadow: 0px 0px 4px  black;">
+            <form role="form">
+              <div class="form-group">
+                <label for="exampleInputEmail1">Tid när status-rapport skickas</label>
+                <input type="email" class="form-control" id="exampleInputEmail1" placeholder="10:00">
+              </div>
+              <div class="form-group">
+                <label for="exampleInputPassword1">E-post för status-rapport</label>
+                <input type="password" class="form-control" id="exampleInputPassword1">
+              </div>
+              <div class="checkbox">
+                <label>
+                  <input type="checkbox"> Aktivera sändning av rapport</label>
+              </div>
+              <button type="submit" class="btn btn-primary float-right mb-3">Spara</button>
+            </form>
+          </div>
+          <div class="col-md-2">
+          </div>
+          <div class="col-md-2">
+          </div>
+          <div class="col-md-2">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6" style="	box-shadow: 0px 0px 4px  black;">
+            <div class="row">
+              <div class="col-md-12">
+                <h5 class="">&nbsp;</h5>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12">
+                <iframe class="col-lg-12 col-md-12 col-sm-12" src="https://fr.wikipedia.org/wiki/Main_Page">
+                </iframe>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12">
+                <div class="row">
+                  <div class="col-md-6">
+                  </div>
+                  <div class="col-md-6">
+                    <button type="button" class="btn btn-danger float-right mt-2">Radera</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-6">
+                <form role="form">
+                  <div class="form-group">
+                    <label for="exampleInputEmail1">URL</label>
+                    <input type="email" class="form-control" id="exampleInputEmail1">
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleInputPassword1">Intervall för kontroll (Antal minuter)</label>
+                    <input type="password" class="form-control" id="exampleInputPassword1">
+                  </div>
+                </form>
+                <div class="row">
+                  <div class="col-md-12">
+                    <a class="btn btn-link" style="color:#0976b4" target="_blank" href="https://fr.wikipedia.org/wiki/Main_Page"><i class="fa fa-linkedin-square fa-fw fa-1x py-1"></i> Öppna URL</a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <form role="form">
+                  <div class="form-group">
+                    <label for="exampleInputEmail1">Timeout (Antal sekunder)</label>
+                    <input type="email" class="form-control" id="exampleInputEmail1">
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleInputPassword1">E-post vid larm när sidan ligger nere<br></label>
+                    <input type="password" class="form-control" id="exampleInputPassword1">
+                  </div>
+                  <div class="checkbox">
+                    <label>
+                      <input type="checkbox">&nbsp;Aktivera sändning vid larm&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</label>
+                  </div>
+                  <button type="submit" class="btn btn-primary float-right mb-2"> Spara<br></button>
+                </form>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6" style="	box-shadow: 0px 0px 4px  black;">
+            <div class="row">
+              <div class="col-md-12">
+                <h5 class="">&nbsp;<br></h5>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12">
+                <iframe class="col-lg-12 col-md-12 col-sm-12" src="https://en.wikipedia.org/wiki/Main_Page">
+                </iframe>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12">
+                <div class="row">
+                  <div class="col-md-6">
+                  </div>
+                  <div class="col-md-6">
+                    <button type="button" class="btn btn-danger float-right mt-2"> Radera</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-6">
+                <form role="form">
+                  <div class="form-group">
+                    <label for="exampleInputEmail1">URL</label>
+                    <input type="email" class="form-control" id="exampleInputEmail1">
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleInputPassword1">Intervall för kontroll (Antal minuter)</label>
+                    <input type="password" class="form-control" id="exampleInputPassword1">
+                  </div>
+                </form>
+                <div class="row">
+                  <div class="col-md-12">
+                    <div class="col-md-12">
+                      <a class="btn btn-link" style="color:#0976b4" target="_blank" href="https://fr.wikipedia.org/wiki/Main_Page"><i class="fa fa-linkedin-square fa-fw fa-1x py-1"></i> Öppna URL</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <form role="form">
+                  <div class="form-group">
+                    <label for="exampleInputEmail1">Timeout (Antal sekunder)</label>
+                    <input type="email" class="form-control" id="exampleInputEmail1">
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleInputPassword1"> E-post&nbsp;vid larm när sidan ligger nere<br></label>
+                    <input type="password" class="form-control" id="exampleInputPassword1">
+                  </div>
+                  <div class="checkbox">
+                    <label>
+                      <input type="checkbox"> Aktivera sändning vid larm&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</label>
+                  </div>
+                  <button type="submit" class="btn btn-primary float-right">Spara</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6" style="	box-shadow: 0px 0px 4px  black;">
+            <div class="row">
+              <div class="col-md-12">
+                <iframe class="col-lg-12 col-md-12 col-sm-12" src="https://sv.wikipedia.org/wiki/Main_Page">
+                </iframe>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12" style="	box-shadow: inset 0px 0px   black;">
+                <div class="row">
+                  <div class="col-md-6">
+                  </div>
+                  <div class="col-md-6">
+                    <button type="button" class="btn btn-danger float-right mt-2">Radera<br></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-6">
+                <form role="form">
+                  <div class="form-group">
+                    <label for="exampleInputEmail1"> URL</label>
+                    <input type="email" class="form-control" id="exampleInputEmail1">
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleInputPassword1"> Intervall för kontroll (Antal minuter)</label>
+                    <input type="password" class="form-control" id="exampleInputPassword1">
+                  </div>
+                </form>
+                <div class="row">
+                  <div class="col-md-12">
+                    <div class="col-md-12">
+                      <a class="btn btn-link" style="color:#0976b4" target="_blank" href="https://fr.wikipedia.org/wiki/Main_Page"><i class="fa fa-linkedin-square fa-fw fa-1x py-1"></i> Öppna URL</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <form role="form">
+                  <div class="form-group">
+                    <label for="exampleInputEmail1"> Timeout (Antal sekunder)</label>
+                    <input type="email" class="form-control" id="exampleInputEmail1">
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleInputPassword1"> E-post vid larm när sidan ligger nere</label>
+                    <input type="password" class="form-control" id="exampleInputPassword1">
+                  </div>
+                  <div class="checkbox">
+                    <label>
+                      <input type="checkbox">&nbsp;Aktivera sändning vid larm&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</label>
+                  </div>
+                  <button type="submit" class="btn btn-primary float-right mb-2"> Spara</button>
+                </form>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6" style="	box-shadow: 0px 0px 4px  black;">
+            <div class="row">
+              <div class="col-md-12">
+                <iframe class="col-lg-12 col-md-12 col-sm-12" src="https://en.wikipedia.org/wiki/Main_Page">
+                </iframe>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12">
+                <div class="row">
+                  <div class="col-md-6">
+                  </div>
+                  <div class="col-md-6">
+                    <button type="button" class="btn btn-danger float-right mt-2">Radera<br></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-6" style="">
+                <form role="form">
+                  <div class="form-group">
+                    <label for="exampleInputEmail1"> URL</label>
+                    <input type="email" class="form-control" id="exampleInputEmail1">
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleInputPassword1"> Intervall för kontroll (Antal minuter)</label>
+                    <input type="password" class="form-control" id="exampleInputPassword1">
+                  </div>
+                </form>
+                <div class="row">
+                  <div class="col-md-12">
+                    <div class="col-md-12">
+                      <a class="btn btn-link" style="color:#0976b4" target="_blank" href="https://fr.wikipedia.org/wiki/Main_Page"><i class="fa fa-linkedin-square fa-fw fa-1x py-1"></i> Öppna URL</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <form role="form">
+                  <div class="form-group">
+                    <label for="exampleInputEmail1">Timeout (Antal sekunder)&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</label>
+                    <input type="email" class="form-control" id="exampleInputEmail1">
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleInputPassword1">E-post vid larm när sidan ligger nere<br></label>
+                    <input type="password" class="form-control" id="exampleInputPassword1">
+                  </div>
+                  <div class="checkbox">
+                    <label>
+                      <input type="checkbox">&nbsp;Aktivera sändning vid larm&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</label>
+                  </div>
+                  <button type="submit" class="btn btn-primary float-right"> Spara</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="js/jquery.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/scripts.js"></script>
+</body>
+
+</html>
