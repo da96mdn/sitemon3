@@ -4,7 +4,7 @@ import javax.security.auth.login.LoginException;
 
 /**
  * Klass för att testa JAAS auktorisering
- * @author Mathias Dicklén
+ * @author Mathias Dicklén           test
  * @version 1.0
  */
 public class JaasAuthenticationTest
