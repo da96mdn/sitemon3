@@ -53,11 +53,11 @@ public class SmSettingsController
 			SmSettings smSettings =sitemonSettingsRepository.getFirstByIdGreaterThanEqual(1);
 			if(smSettings == null)
 			{
-				throw new SmException("(!) Inställningar saknas i tabellen sm_settings.");
+				throw new SmException(SmException.PRE_ERR+"Inställningar saknas i tabellen sm_settings.");
 			}
 			smSettings.setNrOfWebSites(nrOfSites);
 			sitemonSettingsRepository.save(smSettings);
-			rValue =  new ResponseEntity<>("Antal sidor är uppdaterat till "+smSettings.getNrOfWebSites(), HttpStatus.OK);
+			rValue =  new ResponseEntity<>("(i) Antal sidor är uppdaterat till "+smSettings.getNrOfWebSites(), HttpStatus.OK);
 		}
 		catch (final Exception e)
 		{

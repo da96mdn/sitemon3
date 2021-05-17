@@ -9,6 +9,7 @@ package bex.aq.sitemon.error;
 public class SmException extends RuntimeException
 {
 	public static final String PRE_ERR_DEFAULT = "(!) Ooops! Något gick fel. Vänligen kontakta administratören. Error: ";
+	public static final String PRE_ERR = "(!) Error: ";
 
 	/**
 	 * Konstruktor för egen exception
