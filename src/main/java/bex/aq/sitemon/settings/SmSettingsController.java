@@ -6,9 +6,6 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.List;
-import java.util.TreeSet;
-
 /**
  * REST-API-klass för att hantera inställningar.
  *
@@ -50,20 +47,24 @@ public class SmSettingsController
 	@PostMapping(path="/postNrOfSites", produces = "application/json")
 	public final ResponseEntity<String> postNrOfSites(@RequestParam final Integer nrOfSites)
 	{
-	   boolean a = true;
-	   if(a = false)
-	   {
-	   	  int b = 2;
-	   }
-
-		final SmSettings smSettings =sitemonSettingsRepository.getFirstByIdGreaterThanEqual(1);
-		if(smSettings == null)
+		ResponseEntity<String> rValue;
+		try
 		{
-		    throw new SmException("test");
+			SmSettings smSettings =sitemonSettingsRepository.getFirstByIdGreaterThanEqual(1);
+			if(smSettings == null)
+			{
+				throw new SmException("(!) Inställningar saknas i tabellen sm_settings.");
+			}
+			smSettings.setNrOfWebSites(nrOfSites);
+			sitemonSettingsRepository.save(smSettings);
+			rValue =  new ResponseEntity<>("Antal sidor är uppdaterat till "+smSettings.getNrOfWebSites(), HttpStatus.OK);
 		}
-		smSettings.setNrOfWebSites(nrOfSites);
-		sitemonSettingsRepository.save(smSettings);
-		return new ResponseEntity<>("Number of sites is updated to "+smSettings.getNrOfWebSites(), HttpStatus.OK);
+		catch (final Exception e)
+		{
+			e.printStackTrace(); //Ge stacktrace i debug.
+			throw new SmException(SmException.PRE_ERR_DEFAULT + e);  //Visa lite info till klienten.
+		}
+		return rValue;
 	}
 
 }
