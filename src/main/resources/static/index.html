@@ -32,24 +32,24 @@
             <form role="form" action="postNrOfSites" method="POST">
               <div class="form-group">
                 <label for="inputNrOfWebSites">Antal Webbplatser</label>
-                <input type="number" class="form-control" id="inputNrOfWebSites" name="nrOfSites">
+                <input type="number" class="form-control" id="inputNrOfWebSites" name="nrOfSitesField">
               </div>
               <button type="submit" class="btn btn-primary float-right"> Uppdatera</button>
             </form>
           </div>
           <div class="col-md-2" style="	box-shadow: 0px 0px 4px  black;">
-            <form role="form">
+            <form role="form" action="postReportSettings" method="POST">
               <div class="form-group">
-                <label for="exampleInputEmail1">Tid när status-rapport skickas</label>
-                <input type="email" class="form-control" id="exampleInputEmail1" placeholder="10:00">
+                <label for="inputTime">Tid när status-rapport skickas</label>
+                <input type="time" class="form-control" id="inputTime" placeholder="10:00" name="timeField">
               </div>
               <div class="form-group">
-                <label for="exampleInputPassword1">E-post för status-rapport</label>
-                <input type="password" class="form-control" id="exampleInputPassword1">
+                <label for="inputEmail">E-post för status-rapport</label>
+                <input type="email" class="form-control" id="inputEmail" name="emailField">
               </div>
               <div class="checkbox">
                 <label>
-                  <input type="checkbox"> Aktivera sändning av rapport</label>
+                  <input type="checkbox" name="activateSendReportChk"> Aktivera sändning av rapport</label>
               </div>
               <button type="submit" class="btn btn-primary float-right mb-3">Spara</button>
             </form>
